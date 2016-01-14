@@ -50,7 +50,7 @@ while True:
 			if (part):
 				incomingSocket.sendall(part)
 			select.select(
-				[incomingSocket, outgoingSocket],[],[incomingSocket, outgoingSocket],1)
+				[incomingSocket, outgoingSocket],[],[incomingSocket, outgoingSocket],1.0)
 		
 		print request 
 		sys.exit(0)
